@@ -35,3 +35,6 @@ function tan() {
     let value = parseFloat(display.value);
     display.value = Math.tan(toRadians(value)).toFixed(4);
 }
+function hapus() {
+    display.value = display.value.slice(0, -1);
+}
