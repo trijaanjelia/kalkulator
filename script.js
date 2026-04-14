@@ -10,7 +10,9 @@ function clearDisplay() {
 
 function hitung() {
     try {
-        display.value = eval(display.value);
+        let result = eval(display.value);
+        if (!isFinite(result)) throw Error();
+        display.value = result;
     } catch {
         display.value = "Error";
     }
