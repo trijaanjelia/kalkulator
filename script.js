@@ -38,3 +38,11 @@ function tan() {
 function hapus() {
     display.value = display.value.slice(0, -1);
 }
+function akar() {
+    display.value = Math.sqrt(parseFloat(display.value));
+}
+
+function pangkat() {
+    let value = parseFloat(display.value);
+    display.value = value * value;
+}
