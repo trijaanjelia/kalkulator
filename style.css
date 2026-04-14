@@ -1,28 +1,36 @@
 body {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+/* GLASS EFFECT */
 .calculator {
-    background: #0f05c2;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 #display {
     width: 100%;
     height: 60px;
-    margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 26px;
     text-align: right;
     padding: 10px;
+    border-radius: 12px;
     border: none;
-    border-radius: 10px;
+    margin-bottom: 15px;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
 }
 
 .buttons {
@@ -33,45 +41,29 @@ body {
 
 button {
     height: 60px;
-    font-size: 16px;
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #efecec;
-    color: rgb(37, 160, 181);
-    transition: 0.2s;
-}
-
-button:hover {
-    background: #666666;
-}
-
-.zero {
-    grid-column: span 2;
-}
-button:active {
-    transform: scale(0.9);
-}
-button {
-    height: 60px;
+    border-radius: 12px;
     font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #444;
     color: white;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.15);
     transition: 0.2s;
 }
 
-/* Hover (saat disentuh mouse) */
+/* hover */
 button:hover {
-    background: #666;
+    background: rgba(255,255,255,0.3);
     transform: scale(1.05);
 }
 
-/* Klik (INI YANG KEREN 🔥) */
+/* klik */
 button:active {
     transform: scale(0.85);
     background: #00c3ff;
     box-shadow: 0 0 10px #00f2fe;
+}
+
+.zero {
+    grid-column: span 2;
 }
